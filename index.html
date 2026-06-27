@@ -51,6 +51,54 @@
     .portfolio-img-fixed:hover {
       transform: scale(1.05);
     }
+    /* Fondo oscuro de la ventana flotante */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Mostrar ventana al activarse */
+    .lightbox-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Imagen expandida dentro de la ventana */
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 4px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .lightbox-overlay.active .lightbox-img {
+      transform: scale(1);
+    }
+
+    /* Botón flotante para cerrar (X) */
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
 
 
       .hero { width: 100%; min-height: 85vh; position: relative; background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('assets/portfolio/fondo-portada.jpg.jpeg') no-repeat center center/cover; padding: 120px 0 60px 0; display: flex; align-items: center; }
@@ -208,6 +256,42 @@
       <p class="m-0">&copy; 2026 Tony's Construcción. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <!-- Ventana emergente flotante para expandir imágenes -->
+  <div id="lightbox" class="lightbox-overlay">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-target" src="" alt="Vista ampliada">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-target');
+      const closeBtn = document.getElementById('lightbox-close');
+      const galleryImages = document.querySelectorAll('.portfolio-img-fixed');
+
+      // Detecta clic en cualquier imagen del mosaico
+      galleryImages.forEach(img => {
+        img.style.cursor = 'pointer'; // Cambia el cursor para indicar que es cliqueable
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src; // Pasa la ruta de la foto a la ventana grande
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add('active'); // Muestra la ventana oscura
+        });
+      });
+
+      // Cierra la ventana al hacer clic en la "X"
+      closeBtn.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+      });
+
+      // Cierra también haciendo clic en cualquier parte oscura del fondo
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
