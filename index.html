@@ -1,26 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Tony's Construcción y Hardscaping</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="description" content="Diseño y construcción de caminos de piedra, adoquines y jardineras rústicas.">
+  <meta name="keywords" content="hardscaping, jardineria, piedra, adoquines, patios">
+
+  <!-- Iconos y Tipografías desde Internet -->
+  <link href="https://googleapis.com" rel="preconnect">
+  <link href="https://gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://jsdelivr.net" rel="stylesheet">
+  <link href="https://jsdelivr.net" rel="stylesheet">
+
+  <!-- Estilos base para asegurar que NO se vea en blanco -->
+  <style>
+    body { font-family: 'Poppins', sans-serif; color: #444444; background-color: #f8f9fa; }
+    a { text-decoration: none; }
+    .hero { width: 100%; min-height: 70vh; position: relative; background: #111111; padding: 120px 0 60px 0; display: flex; align-items: center; }
+    .hero h1 { margin: 0 0 10px 0; font-size: 48px; font-weight: 700; line-height: 56px; color: #ffffff; }
+    .hero p { color: #eeeeee; margin-bottom: 30px; font-size: 22px; }
+    .btn-get-started { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 1px; display: inline-block; padding: 10px 28px; border-radius: 5px; transition: 0.5s; color: #fff; background: #25D366; }
+    .section-title { text-align: center; padding-bottom: 30px; margin-top: 50px; }
+    .section-title h2 { font-size: 32px; font-weight: bold; text-transform: uppercase; margin-bottom: 20px; padding-bottom: 20px; position: relative; color: #222; }
+    .service-box { padding: 30px; border-radius: 8px; background: #fff; box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1); transition: 0.3s; height: 100%; }
+    .service-box h3 { font-weight: 700; margin-bottom: 15px; font-size: 20px; color: #111; }
+    .footer { background: #111111; padding: 30px 0; color: #fff; text-align: center; margin-top: 50px; }
+  </style>
 </head>
+
 <body>
-  <section id="hero" class="hero section">
+
+  <!-- ENCABEZADO -->
+  <header id="header" class="p-3 bg-dark text-white">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3 m-0 text-white">Tony's Construcción</h1>
+      <nav>
+        <a href="#hero" class="text-white me-3">Inicio</a>
+        <a href="#services" class="text-white me-3">Servicios</a>
+        <a href="#portfolio" class="text-white me-3">Galería</a>
+        <a href="#contact" class="text-white">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PORTADA PRINCIPAL (HERO) -->
+  <section id="hero" class="hero">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center" style="padding-top: 100px;">
-          <h1 style="font-size: 48px; font-weight: bold; color: #333;">Especialistas en Hardscaping y Paisajismo</h1>
-          <p style="font-size: 18px; margin: 20px 0; color: #555;">Diseño y construcción de caminos de piedra, adoquines, jardineras rústicas y acabados exclusivos para tu patio.</p>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1>Especialistas en Hardscaping y Paisajismo</h1>
+          <p>Diseño y construcción de caminos de piedra, adoquines, jardineras rústicas y acabados exclusivos para tu patio.</p>
           <div class="d-flex">
-            <a href="https://wa.me/17373510675" target="_blank" style="background: #25D366; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block;">Contáctanos por WhatsApp</a>
+            <a href="https://wa.me/1737351067" target="_blank" class="btn-get-started"><i class="bi bi-whatsapp"></i> Cotizar Proyecto</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <main id="main">
+
+    <!-- SECCIÓN DE SERVICIOS DETALLADOS -->
+    <section id="services" class="container py-5">
+      <div class="section-title">
+        <h2>Nuestras Especialidades</h2>
+        <p>Trabajos profesionales garantizados en construcción de exteriores.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-box">
+            <h3><i class="bi bi-layer-forward text-success"></i> Caminos de Piedra</h3>
+            <p>Instalación experta de senderos, pasillos y entradas con piedra natural o adoquines resistentes al tráfico y clima.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <h3><i class="bi bi-bricks text-success"></i> Jardineras de Piedra</h3>
+            <p>Construcción de muros de contención decorativos y jardineras elevadas para darle un diseño limpio y moderno a tu jardín.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <h3><i class="bi bi-tree text-success"></i> Paisajismo Completo</h3>
+            <p>Colocación de mantillo (mulch), plantas ornamentales y nivelación de terrenos que hacen resaltar tus estructuras de piedra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE GALERÍA (PORTAFOLIO) -->
+    <section id="portfolio" class="bg-light py-5">
+      <div class="container">
+        <div class="section-title">
+          <h2>Galería de Trabajos</h2>
+          <p>Fotos de proyectos y acabados en piedra (Próximamente fotos de tus trabajos reales).</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4"><img src="https://unsplash.com" class="img-fluid rounded" alt="Trabajo de piedra"></div>
+          <div class="col-md-4"><img src="https://unsplash.com" class="img-fluid rounded" alt="Jardinera de piedra"></div>
+          <div class="col-md-4"><img src="https://unsplash.com" class="img-fluid rounded" alt="Camino de adoquín"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO E INFORMACIÓN -->
+    <section id="contact" class="container py-5">
+      <div class="section-title">
+        <h2>Contacto y Presupuestos</h2>
+        <p>¿Listo para transformar tu patio? ¡Escríbenos u obtén información de inmediato!</p>
+      </div>
+      <div class="row g-4 justify-content-center text-center">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <i class="bi bi-telephone-fill fs-2 text-success"></i>
+            <h4 class="mt-2">Teléfono</h4>
+            <p><a href="tel:+17373510675" class="text-dark">+1 (737) 351-0675</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <i class="bi bi-clock-fill fs-2 text-success"></i>
+            <h4 class="mt-2">Horario de Atención</h4>
+            <p>Lunes a Sábado: 7:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container">
+      <p class="m-0">&copy; 2026 Tony's Construcción. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
